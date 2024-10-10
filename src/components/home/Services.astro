@@ -1,0 +1,63 @@
+---
+const services = [
+  {
+    step: '01',
+    name: 'Interface Design',
+    description:
+      'We design websites and apps with stunning visuals, intuitive usability, and seamless functionality. Our user-centered approach, backed by research and testing, ensures a memorable and engaging experience for your audience.',
+  },
+  {
+    step: '02',
+    name: 'Development',
+    description:
+      'We create seamless digital experiences with expert development in front-end, back-end, CMS, eCommerce, and custom apps. We focus on user-centered design through research and testing.',
+  },
+  {
+    step: '03',
+    name: 'Graphics Design and Branding',
+    description:
+      'Your brand reflects what feels good to your audience and the people behind it. We help define your identity, design and communicate your vision clearly.',
+  },
+  {
+    step: '04',
+    name: 'Digital Marketing',
+    description:
+      'We turn attention into trust and trust into profit with tailored digital marketing strategies. Our approach optimizes ROI with ongoing improvements and clear performance reports.',
+  },
+  {
+    step: '05',
+    name: 'Business Consulting',
+    description:
+      'Our Business Consulting Services address a company’s end-to-end business needs. We provide comprehensive services to support your business to drive people, process and technology considerations.',
+  },
+  {
+    step: '06',
+    name: 'Ongoing Support',
+    description:
+      'We offer ongoing website support for updates, new features, and security. Through our portal, your team can easily request, track, and prioritize tasks, making us a seamless part of your team.',
+  },
+];
+---
+
+<section class="py-16 sm:py-20">
+  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <div class="flex flex-col gap-12 sm:gap-16">
+      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Services</h2>
+      <div class="grid gap-8 lg:grid-cols-3">
+        {
+          services.map((service) => (
+            <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-12 rounded-3xl px-6 py-8">
+              <p class="text-sm">{service.step}</p>
+              <div class="flex flex-col gap-4">
+                <h3 class="text-xl font-medium">{service.name}</h3>
+                <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
+                  {service.description}
+                </p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
