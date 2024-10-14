@@ -1,11 +1,11 @@
 ---
-import About from '../components/home/About.astro';
-import Cta from '../components/home/Cta.astro';
-import Expertise from '../components/home/Expertise.astro';
+import Layout from '../layouts/Layout.astro';
 import Hero from '../components/home/Hero.astro';
 import Services from '../components/home/Services.astro';
+import Expertise from '../components/home/Expertise.astro';
+import About from '../components/home/About.astro';
 import Testimonials from '../components/home/Testimonials.astro';
-import Layout from '../layouts/Layout.astro';
+import Cta from '../components/home/Cta.astro';
 ---
 
 <Layout
@@ -18,4 +18,12 @@ import Layout from '../layouts/Layout.astro';
   <About />
   <Testimonials />
   <Cta />
+
+  <button id="error-button">Throw test error</button>
+  <script>
+    function handleClick() {
+      throw new Error('This is a test error');
+    }
+    document.querySelector("#error-button").addEventListener("click", handleClick);
+  </script>
 </Layout>
